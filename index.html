@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Todo List</title>
+</head>
+
+<body>
+  
+  <h1>Todo List</h1>
+  
+  <div class="container">
+
+    <div class="input-data">
+      <input type="text" placeholder="タスクを入力してください">
+      <div class="flex-container">
+        <div class="input-priority">
+          優先度：
+          <select>
+            <option value="low">低</option>
+            <option value="middle">中</option>
+            <option value="high">高</option>
+          </select>
+        </div>
+        <div class="input-deadline">
+          期限：<input type="date">
+        </div>
+        <div class="input-btns">
+          <button class="btn" id="clear">クリア</button>
+          <button class="btn" id="add">追加</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="display-setting">
+      <div class="filter">
+        <div class="btn filter-btn">
+          フィルター機能<span class="material-symbols-outlined more">expand_more</span><span class="material-symbols-outlined less">expand_less</span>
+        </div>
+        <div class="filter-settings">
+          <div class="filter-priority">
+            優先度<br>
+            <label>
+              <input type="checkbox" name="filter-priority-option" id="filter-priority-low" checked>低
+            </label>
+            <label>
+              <input type="checkbox" name="filter-priority-option" id="filter-priority-middle" checked>中
+            </label>
+            <label>
+              <input type="checkbox" name="filter-priority-option" id="filter-priority-high" checked>高
+            </label>
+          </div>
+          <div class="filter-deadline">
+            期限<br>
+            <input type="date">
+            <select>
+              <option>指定なし</option>
+              <option>以前</option>
+              <option>以降</option>
+            </select>
+          </div>
+          <div class="filter-status">
+            状態<br>
+            <label>
+              <input type="checkbox" name="filter-status-option"id="filter-status-0" checked>作業前
+            </label>
+            <label>
+              <input type="checkbox" name="filter-status-option"id="filter-status-1" checked>作業中
+            </label>
+            <label>
+              <input type="checkbox" name="filter-status-option"id="filter-status-2" checked>完了
+            </label>
+          </div>
+        </div>
+        <div class="filter-btns">
+          <button class="btn" id="reset">リセット</button>
+          <button class="btn" id="exec">実行</button>
+        </div>
+      </div>
+    </div>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>タスク</th>
+          <th>優先度</th>
+          <th>期限</th>
+          <th>状態</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr>
+          <td>hogehoge</td>
+          <td>高</td>
+          <td>2024/02/29</td>
+          <td>
+            <select>
+              <option selected>作業前</option>
+              <option>作業中</option>
+              <option>完了</option>
+            </select>
+          </td>
+          <td>
+            <button class="btn delete">削除</button>
+          </td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
