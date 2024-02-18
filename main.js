@@ -87,7 +87,8 @@
           if(item.id === todo.id) {
             item.status = select.value;
           }
-        });    
+        });
+        console.log(todos);
         localStorage.setItem('todos', JSON.stringify(todos));
       });
       td.appendChild(select);
@@ -103,7 +104,8 @@
         todos = todos.filter((item) => {
           return item.id !== todo.id;
         });
-        tbody.removeChild(tr);  
+        tbody.removeChild(tr);
+        console.log(todos);
         localStorage.setItem('todos', JSON.stringify(todos));
       });
       td = document.createElement('td');
