@@ -84,6 +84,7 @@
       td = document.createElement('td');
       select.addEventListener('change', () => {
         todo.status = select.value;
+        localStorage.setItem('todos', JSON.stringify(todos));
       });
       td.appendChild(select);
       tr.appendChild(td);
@@ -98,7 +99,7 @@
         todos = todos.filter((item) => {
           return item.id !== todo.id;
         });
-        tbody.removeChild(tr);      
+        tbody.removeChild(tr);
         localStorage.setItem('todos', JSON.stringify(todos));
       });
       td = document.createElement('td');
