@@ -83,7 +83,12 @@
       select.appendChild(option);
       td = document.createElement('td');
       select.addEventListener('change', () => {
-        todo.status = select.value;
+        todos.forEach((item) => {
+          if(item.id === todo.id) {
+            item.status = select.value;
+          }
+        });    
+        localStorage.setItem('todos', JSON.stringify(todos));
       });
       td.appendChild(select);
       tr.appendChild(td);
@@ -98,14 +103,14 @@
         todos = todos.filter((item) => {
           return item.id !== todo.id;
         });
-        tbody.removeChild(tr);
+        tbody.removeChild(tr);  
+        localStorage.setItem('todos', JSON.stringify(todos));
       });
       td = document.createElement('td');
       td.appendChild(btn);
       tr.appendChild(td);
       tbody.appendChild(tr);
     });
-    localStorage.setItem('todos', JSON.stringify(todos));
   }
 
   function updateDisplay() {
@@ -201,6 +206,7 @@
     }
     todos.push(todo);
     renderTodos(todos);
+    localStorage.setItem('todos', JSON.stringify(todos));
   });
 
   filterBtn.addEventListener('click', () => {
