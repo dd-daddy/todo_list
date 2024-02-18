@@ -84,7 +84,6 @@
       td = document.createElement('td');
       select.addEventListener('change', () => {
         todo.status = select.value;
-        localStorage.setItem('todos', JSON.stringify(todos));
       });
       td.appendChild(select);
       tr.appendChild(td);
@@ -100,13 +99,13 @@
           return item.id !== todo.id;
         });
         tbody.removeChild(tr);
-        localStorage.setItem('todos', JSON.stringify(todos));
       });
       td = document.createElement('td');
       td.appendChild(btn);
       tr.appendChild(td);
       tbody.appendChild(tr);
     });
+    localStorage.setItem('todos', JSON.stringify(todos));
   }
 
   function updateDisplay() {
@@ -201,7 +200,6 @@
       status: '作業前'
     }
     todos.push(todo);
-    localStorage.setItem('todos', JSON.stringify(todos));
     renderTodos(todos);
   });
 
