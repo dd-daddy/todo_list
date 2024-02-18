@@ -111,6 +111,7 @@
       tr.appendChild(td);
       tbody.appendChild(tr);
     });
+    localStorage.setItem('todos', JSON.stringify(todos));
   }
 
   function updateDisplay() {
