@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  line-height: 1.2;
 }
 
 h1 {
@@ -9,6 +10,10 @@ h1 {
   padding: 8px 16px;
   background-color: cornflowerblue;
   color: #fff;
+}
+
+input {
+  width: 25%;
 }
 
 select {
@@ -238,7 +243,7 @@ td {
 @media screen and (max-width: 768px) {
   
   .container {
-    width: 440px;
+    width: 420px;
     margin: 0 auto;
   }
   
