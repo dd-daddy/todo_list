@@ -2,7 +2,6 @@
 
 body {
   margin: 0;
-  line-height: 1.2;
 }
 
 h1 {
@@ -10,10 +9,6 @@ h1 {
   padding: 8px 16px;
   background-color: cornflowerblue;
   color: #fff;
-}
-
-input {
-  width: 25%;
 }
 
 select {
@@ -138,6 +133,7 @@ select {
   flex-wrap: wrap;
   align-items: center;
   margin-top: 12px;
+  line-height: 1.5;
 }
 
 .filter-priority {
