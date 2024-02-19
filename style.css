@@ -101,12 +101,7 @@ select {
   box-sizing: border-box;
 }
 
-.material-symbols-outlined.more {
-  margin-left: 4px;
-  font-size: 16px;
-  vertical-align: -3px;
-}
-
+.material-symbols-outlined.more,
 .material-symbols-outlined.less {
   margin-left: 4px;
   font-size: 16px;
@@ -136,10 +131,7 @@ select {
   line-height: 1.5;
 }
 
-.filter-priority {
-  margin-right: 24px;
-}
-
+.filter-priority,
 .filter-deadline {
   margin-right: 24px;
 }
