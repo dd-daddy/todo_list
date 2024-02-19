@@ -205,17 +205,18 @@ th:nth-child(5) {
 
 td {
   border-bottom: 1px solid #aaa;
-  padding: 8px;
+  padding: 8px 0;
 }
 
 .btn.delete {
   display: block;
   position: relative;
   background-color: #ff4536;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   font-weight: bold;
+  margin: 0 auto;
 }
 
 .btn.delete::before, .btn.delete::after {
@@ -224,7 +225,7 @@ td {
   top: 50%;
   left: 50%;
   width: 2px;
-  height: 12px;
+  height: 10px;
   background: #fff;
 }
 
@@ -260,15 +261,15 @@ td {
   }
   
   th:nth-child(3) {
-    width: 85px;
+    width: 80px;
   }
   
   th:nth-child(4) {
-    width: 70px;
+    width: 55px;
   }
   
   th:nth-child(5) {
-    width: 30px;
+    width: 20px;
   }
 
   td select {

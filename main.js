@@ -29,7 +29,6 @@
     middleCheck.checked = true;
     highCheck.checked = true;
     deadlineInput.value = getToday();
-    deadlineInput.disabled = true;
     deadlineSelect.options[0].selected = true;
     deadlineSelect.options[1].selected = false;
     deadlineSelect.options[2].selected = false;
@@ -237,15 +236,6 @@
       less.classList.add('display-inline');
       settings.classList.add('display-flex');
       btns.classList.add('display-block');
-    }
-  });
-
-  deadlineSelect.addEventListener('click', () => {
-    if(deadlineSelect.value === '指定なし') {
-      deadlineInput.disabled = true;
-    }
-    else {
-      deadlineInput.disabled = false;
     }
   });
 
