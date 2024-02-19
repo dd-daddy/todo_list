@@ -94,7 +94,6 @@
       td.appendChild(select);
       tr.appendChild(td);
       let btn = document.createElement('button');
-      btn.textContent = '削除';
       btn.classList.add('btn');
       btn.classList.add('delete');
       btn.addEventListener('click', () => {

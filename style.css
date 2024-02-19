@@ -13,17 +13,12 @@ h1 {
 
 select {
   font-size: 16px;
+  padding: 2px;
 }
 
 .container {
   width: 640px;
   margin: 0 auto;
-}
-
-.flex-container {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
 }
 
 .input-data {
@@ -32,6 +27,13 @@ select {
   border: 1px solid #aaa;
   border-radius: 8px;
   box-shadow: 4px 4px 8px #ddd;
+}
+
+.flex-container {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .input-data input[type="text"] {
@@ -69,6 +71,7 @@ select {
 .btn:active {
   opacity: .5;
 }
+
 .btn#clear {
   background: #999;
   padding: 6px 16px;
@@ -80,13 +83,10 @@ select {
   padding: 6px 24px;
 }
 
-.display-setting {
+.filter {
   margin-top: 32px;
   border: 1px solid #aaa;
   border-radius: 8px;
-}
-
-.filter {
   font-size: 16px;
   padding: 20px 16px;
 }
@@ -130,12 +130,9 @@ select {
 }
 
 .filter-settings {
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 12px;
-}
-
-summary {
-  display: block;
 }
 
 .filter-priority {
@@ -202,7 +199,7 @@ th:nth-child(4) {
 }
 
 th:nth-child(5) {
-  width: 60px;
+  width: 30px;
 }
 
 td {
@@ -211,6 +208,70 @@ td {
 }
 
 .btn.delete {
+  display: block;
+  position: relative;
   background-color: #ff4536;
-  padding: 4px 12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.btn.delete::before, .btn.delete::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 12px;
+  background: #fff;
+}
+
+.btn.delete::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.btn.delete::after {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+  
+  .container {
+    width: 440px;
+    margin: 0 auto;
+  }
+  
+  .input-btns {
+    margin-top: 12px;
+  }
+  
+  table {
+    font-size: 14px;
+  }
+  
+  th:nth-child(1) {
+    width: auto;
+  }
+  
+  th:nth-child(2) {
+    width: 45px;
+  }
+  
+  th:nth-child(3) {
+    width: 85px;
+  }
+  
+  th:nth-child(4) {
+    width: 70px;
+  }
+  
+  th:nth-child(5) {
+    width: 30px;
+  }
+
+  td select {
+    font-size: 14px;
+  }
+
 }

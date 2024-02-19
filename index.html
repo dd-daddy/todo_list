@@ -37,50 +37,48 @@
       </div>
     </div>
     
-    <div class="display-setting">
-      <div class="filter">
-        <div class="btn filter-btn">
-          フィルター機能<span class="material-symbols-outlined more">expand_more</span><span class="material-symbols-outlined less">expand_less</span>
+    <div class="filter">
+      <div class="btn filter-btn">
+        フィルター機能<span class="material-symbols-outlined more">expand_more</span><span class="material-symbols-outlined less">expand_less</span>
+      </div>
+      <div class="filter-settings">
+        <div class="filter-priority">
+          優先度<br>
+          <label>
+            <input type="checkbox" name="filter-priority-option" id="filter-priority-low" checked>低
+          </label>
+          <label>
+            <input type="checkbox" name="filter-priority-option" id="filter-priority-middle" checked>中
+          </label>
+          <label>
+            <input type="checkbox" name="filter-priority-option" id="filter-priority-high" checked>高
+          </label>
         </div>
-        <div class="filter-settings">
-          <div class="filter-priority">
-            優先度<br>
-            <label>
-              <input type="checkbox" name="filter-priority-option" id="filter-priority-low" checked>低
-            </label>
-            <label>
-              <input type="checkbox" name="filter-priority-option" id="filter-priority-middle" checked>中
-            </label>
-            <label>
-              <input type="checkbox" name="filter-priority-option" id="filter-priority-high" checked>高
-            </label>
-          </div>
-          <div class="filter-deadline">
-            期限<br>
-            <input type="date">
-            <select>
-              <option>指定なし</option>
-              <option>以前</option>
-              <option>以降</option>
-            </select>
-          </div>
-          <div class="filter-status">
-            状態<br>
-            <label>
-              <input type="checkbox" name="filter-status-option"id="filter-status-0" checked>作業前
-            </label>
-            <label>
-              <input type="checkbox" name="filter-status-option"id="filter-status-1" checked>作業中
-            </label>
-            <label>
-              <input type="checkbox" name="filter-status-option"id="filter-status-2" checked>完了
-            </label>
-          </div>
+        <div class="filter-deadline">
+          期限<br>
+          <input type="date">
+          <select>
+            <option>指定なし</option>
+            <option>以前</option>
+            <option>以降</option>
+          </select>
         </div>
-        <div class="filter-btns">
-          <button class="btn" id="reset">リセット</button>
-          <button class="btn" id="exec">実行</button>
+        <div class="filter-status">
+          状態<br>
+          <label>
+            <input type="checkbox" name="filter-status-option"id="filter-status-0" checked>作業前
+          </label>
+          <label>
+            <input type="checkbox" name="filter-status-option"id="filter-status-1" checked>作業中
+          </label>
+          <label>
+            <input type="checkbox" name="filter-status-option"id="filter-status-2" checked>完了
+          </label>
         </div>
+      </div>
+      <div class="filter-btns">
+        <button class="btn" id="reset">リセット</button>
+        <button class="btn" id="exec">実行</button>
       </div>
     </div>
   
